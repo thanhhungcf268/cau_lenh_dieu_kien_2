@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    <!-- Bài 1: Chuyển từ độ C sang độ F.   -->
+    function Chuyen_Doi_Nhiet_Do() {
+        let C = parseInt(prompt("nhập nhiệt độ cần chuyển vào :"));
+        return C * 9 / 5 + 32;
+    }
+
+    //    Bài 2: Chuyển từ mét sang feet:
+    function M_F() {
+        let m = parseInt(prompt("nhập chiều dài cần chuyển vào :"));
+        return m * 3.2808;
+    }
+
+    //    Bài 3: Tính diện tích hình vuông khi biết cạnh a
+    function S_Hinh_Vuong() {
+        let a = parseInt(prompt("nhập chiều dài cạnh a vào :"));
+        if (a > 0) {
+            return a * a;
+        } else {
+            alert("dữ liệu bạn nhập phải là số dương ")
+        }
+
+    }
+
+    // Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.
+    function S_Hinh_Chu_Nhat() {
+        let a = parseInt(prompt("nhập chiều dài cạnh a vào :"));
+        let b = parseInt(prompt("nhập chiều dài cạnh b vào :"));
+        if (a > 0 && b > 0) {
+            return a * b;
+        } else {
+            alert("dữ liệu bạn nhập phải là số dương ")
+        }
+    }
+
+    //Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+    function S_Hinh_Tam_Giac() {
+        let a = parseInt(prompt("nhập chiều dài cạnh a vào :"));
+        let b = parseInt(prompt("nhập chiều dài cạnh b vào :"));
+        if (a > 0 && b > 0) {
+            return a * b / 2;
+        } else {
+            alert("dữ liệu bạn nhập phải là số dương")
+        }
+    }
+
+    //    Bài 6: Giải phương trình bậc 1(a*x+b=0).
+    function Giai_Phuong_Trinh_Bac1() {
+        let a = parseInt(prompt("nhập  a vào :"));
+        let b = parseInt(prompt("nhập  b vào :"));
+        a.toFixed(0)
+        b.toFixed(0)
+        alert("phương trình bạn vừa nhập vào là :" + a + "x + " + b + "= 0");
+        if (a === 0) {
+            if (b === 0) {
+                alert("phương trình này có vô số nghiệm")
+            } else {
+                alert("phương trình này vô nghiệm")
+            }
+        } else {
+            alert("phương trình có nghiệm x = " + -b / a);
+        }
+    }
+
+    //    Bài 7: Giải phương trình bậc 2.
+    function Giai() {
+        let a = prompt('Nhập giá trị của a')
+        let b = prompt('Nhập giá trị của b')
+        let c = prompt('Nhập giá trị của c')
+        if (a === 0) {
+            if (b === 0) {
+                if (c === 0) {
+                    alert('Phuong trinh vo so nghiem')
+
+                } else {
+                    alert('Phuong trinh vo nghiem')
+                }
+            } else {
+                alert('Phuong trinh co nghiem duy nhat: ' + (-c / b))
+            }
+        } else {
+            let delta = b * b - 4 * a * c;
+            if (delta > 0) {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                alert('Nghiem thu nhat x1 = ' + x1 + ' Nghiem thu hai x2 = ' + x2)
+            } else if (delta === 0) {
+                let sum = -b / 2 * a
+                alert('Phuong trinh co nghiem kep: x1 = x2 = ' + sum)
+            } else {
+                alert('Phuong trinh vo nghiem')
+            }
+        }
+    }
+
+    //    Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.
+    function Tinh_Tuoi() {
+        let a = parseInt(prompt('nhập số vào để kiểm tra'));
+        if (a > 0 && a < 120) {
+            alert("đây là tuổi của người")
+        } else {
+            alert("đây không phải là tuổi của con người")
+        }
+    }
+
+    //    Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+
+    function Kiem_Tra() {
+        let a = parseInt(prompt("nhập a :"));
+        let b = parseInt(prompt("nhập b :"));
+        let c = parseInt(prompt("nhập c :"));
+        alert("Ba số của bạn nhập là" + a + "," + b + "," + c)
+        let k = a * b * c;
+        if (k > 0) {
+            if (a + b > c && b + c > a && a + c > b) {
+                alert("đây là các cạnh của một hình tam giá")
+            }
+        } else {
+            alert("đây không phải là 3 cạnh của một tam giá")
+        }
+    }
+
+    //Bài 10: Viết chương trình tính giá điện
+    function Gia_Dien() {
+        let a = parseInt(prompt("nhập số điện :"));
+        if (a > 100) {
+            if (a > 200) {
+                alert("tiền điện của bạn tháng này là " + (a * 1500));
+            } else {
+                alert("tiền điện của bạn tháng này là " + (a * 1200));
+            }
+        } else {
+            alert("tiền điện của bạn tháng này là " + (a * 1000));
+        }
+    }
+
+    //    Bài 11: Viết chương trình tính thuế thu nhập cá nhân.
+    function Tinh_thue() {
+        let a = parseInt(prompt("Thu nhập của bạn là :"));
+        let b = parseInt(prompt("số người phụ thuộc của bạn là "));
+        let k = a - (11000000 + (4400000 * b));
+        let k1 = (k * 5) / 100;
+        let k2 = (k * 10 / 100) - 250000;
+        let k3 = (k * 15 / 100) - 750000;
+        let k4 = (k * 20 / 100) - 1650000;
+        if (k <= 0) {
+            alert("bạn không phải đóng thuế ")
+        }
+        if (k > 0 && k <= 5000000) {
+            alert("số tiền thuế bạn phải đóng là " + k1);
+        }
+        if (k > 5000000 && k <= 10000000) {
+            alert("số tiền thuế bạn phải đóng là " + k2);
+        }
+        if (k > 10000000 && k <= 18000000) {
+            alert("số tiền thuế bạn phải đóng là " + k3);
+        }
+        if (k > 18000000 && k <= 32000000) {
+            alert("số tiền thuế bạn phải đóng là " + k4);
+        }
+        if (k > 32000000) {
+            let v = 32000000;
+            let kd4 = (v * 20 / 100) - 1650000;
+            alert("số tiền thuế bạn phải đóng là " + kd4);
+        }
+
+    }
+
+    //Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+    function Tinh_Lai() {
+        let a = parseInt(prompt("số tiền ban đầu :"));
+        let b = parseInt(prompt("thời hạn hẹn trả :"));
+        let d = parseInt(prompt("thời gian trả cụ thể  :"));
+        let c = ( a * 0.9/100) * b
+        if (d>b) {
+            let lk = d - b
+            let u = c + a
+            let l = ((u/100) * lk) + u
+            alert('số tiền lãi phải trả là :' + l)
+        } else {
+            alert("số tiền lãi bạn phải đóng là :" + (c + a));
+        }
+    }
+</script>
